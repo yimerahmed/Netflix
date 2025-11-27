@@ -1,19 +1,38 @@
-.header-wrapper {  
-  width: 100vw;               
-  background-color: #101010;     
-  height: 60px;                
-  padding: 0 20px;             
+.header-wrapper {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: #101010;
   z-index: 1000;
-  display: flex;   
-  justify-content: space-between;            
-  align-items: center;         
 }
 
+/* LEFT LIST */
+.icons-list-left {
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
 
-.left-wrapper img{
-    height: 60px;
-    width: 200px;
+.icons-list-left li {
+  color: white;
+  cursor: pointer;
+}
+
+/* RIGHT ICONS */
+.icons-list {
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.icons-list li {
+  color: white;
+  font-size: 24px;
+  
+  cursor: pointer;
 }

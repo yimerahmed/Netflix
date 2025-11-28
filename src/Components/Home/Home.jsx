@@ -1,5 +1,5 @@
 import React from 'react';
-import RowList from '../RowList';
+import RowList from '../Row/RowList';
 const Home = () => {
   return (
     <div>

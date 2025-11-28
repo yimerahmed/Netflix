@@ -1,6 +1,6 @@
-import React from 'react';
-import Row from './Row';
-import Requests from '../Utils/requests'
+import React from "react";
+import Row from "./Row";
+import Requests from "../../Utils/requests";
 const RowList = () => {
   return (
     <div>
@@ -18,6 +18,6 @@ const RowList = () => {
       <Row title="Documenteries" fetchUrl={Requests.fetchDocumentaries} />
     </div>
   );
-}
+};
 
 export default RowList;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import netflixLogo from "../../assets/Netflix-logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
@@ -7,8 +7,23 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./Header.css";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="header-wrapper d-flex">
+    <div className={`header-wrapper ${isScrolled ? "header-black" : ""}`}>
       <div className="header-container d-flex justify-content-between align-items-center w-100">
         {/* LEFT */}
         <div className="left-wrapper d-flex align-items-center">
@@ -16,8 +31,6 @@ const Header = () => {
             <li>
               <img src={netflixLogo} alt="Netflix Logo" width={100} />
             </li>
-
-            {/* Hide menu on small screens */}
             <li className="d-none d-md-block">Home</li>
             <li className="d-none d-md-block">TV Shows</li>
             <li className="d-none d-md-block">Movies</li>

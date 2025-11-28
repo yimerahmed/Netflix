@@ -1,16 +1,23 @@
 .header-wrapper {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
   height: 60px;
-  background-color: #101010;
+  background-color: transparent;
+  transition: all 0.4s ease-in;
   z-index: 1000;
 }
+
+.header-black {
+  background-color: #101010;
+}
+
 
 /* LEFT LIST */
 .icons-list-left {
   list-style: none;
+  font-size: 15px;
   gap: 15px;
   margin: 0;
   padding: 0;

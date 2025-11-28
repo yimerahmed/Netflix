@@ -1,9 +1,9 @@
 import React from 'react';
-import Row from '../Row'
+import RowList from '../RowList';
 const Home = () => {
   return (
     <div>
-      <Row/>
+      <RowList/>
     </div>
   );
 }

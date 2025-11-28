@@ -1,15 +1,21 @@
-import React,{useState,useEffect} from 'react';
-import sample from '../assets/ekZobS8isE6mA53RAiGDG93hBxL.webp'
+import React from 'react';
+import Row from './Row';
+import Requests from '../Utils/requests'
 const RowList = () => {
-  const [movies,setMovies]=useState({})
-  useEffect(()=>{
-    fetch("")
-    .then()
-
-  },[])
   return (
-    <div className='image-wrapper'>
-      <img src={sample} alt="" />
+    <div>
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={Requests.fetchNetflixOriginals}
+        isLargeRow={true}
+      />
+      <Row title="Trending Now" fetchUrl={Requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={Requests.fetchTopRated} />
+      <Row title="Action Movies" fetchUrl={Requests.fetchActionMovies} />
+      <Row title="Commedy Movies" fetchUrl={Requests.fetchComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={Requests.fetchHorrorMovies} />
+      <Row title="Romance Movies" fetchUrl={Requests.fetchRomanceMovies} />
+      <Row title="Documenteries" fetchUrl={Requests.fetchDocumentaries} />
     </div>
   );
 }

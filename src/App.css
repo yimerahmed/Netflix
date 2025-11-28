@@ -1,6 +1,15 @@
 
 /* API-KEY=26037251f5b06c970d0e7d9893f4064f */
+body{
+    background-color: #111111;
+     color: #fff;
+    
+}
+.heading2{
+    font-size: 24px;
+    font-weight:400; 
 
+}
 /* *{
     padding: 0;
     margin: 0;

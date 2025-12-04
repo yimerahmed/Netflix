@@ -1,3 +1,10 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
 .row-poster {
     width: 100%;
     object-fit: contain;
@@ -8,23 +15,20 @@
 .row-posters{
     display: flex;
     overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: scroll;
     padding: 20px;
 }
 
-.row-poster::-webkit-scrollbar{
-    display: none;
+.row-posters::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .row-poster:hover{
     transform: scale(1.08);
 }
-.row-poster:hover {
-  transform: scale(1.08);
-}
 
 .row-posterLarge{
-    max-height: 50px;
+    max-height: 200px;
 }
 
 .row-posterLarge:hover {

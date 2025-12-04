@@ -12,6 +12,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     const fetchData = async () => {
       try {
         const response = await axiosInstance.get(fetchUrl);
+        // console.log(response)
         setMovies(response.data?.results || []);
       } catch (error) {
         console.error("Error fetching movies:", error);
@@ -60,10 +61,10 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 }`}
                 alt={movie.name || movie.title || movie.original_name}
-                style={{
-                  maxHeight: isLargeRow ? "250px" : "150px",
-                  marginRight: "10px",
-                }}
+                // style={{
+                //   maxHeight: isLargeRow ? "250px" : "150px",
+                //   marginRight: "10px",
+                // }}
               />
             ) : null
           )

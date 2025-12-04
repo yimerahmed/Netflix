@@ -30,15 +30,13 @@ const Banner = () => {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   };
   return (
-    <header
-      className="banner-wrapper"
+    <header className="banner-wrapper"
       style={{
         backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
       }}
     >
       <div className="content-wrapper">
         <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
-
         <div className="button-wrapper">
           <button>Play</button>
           <button>My List</button>

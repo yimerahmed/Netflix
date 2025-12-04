@@ -26,35 +26,27 @@ const Header = () => {
     <div className={`header-wrapper ${isScrolled ? "header-black" : ""}`}>
       <div className="header-container d-flex justify-content-between align-items-center w-100">
         {/* LEFT */}
-        <div className="left-wrapper d-flex align-items-center">
+        <div className="left-wrapper ">
           <ul className="icons-list-left d-flex align-items-center">
             <li>
-              <img src={netflixLogo} alt="Netflix Logo" width={100} />
+              <img src={netflixLogo} alt="Netflix Logo" width={110} />
             </li>
             <li className="d-none d-md-block">Home</li>
             <li className="d-none d-md-block">TV Shows</li>
             <li className="d-none d-md-block">Movies</li>
             <li className="d-none d-md-block">Latest</li>
             <li className="d-none d-md-block">My List</li>
-            <li className="d-none d-lg-block">Browse by language</li>
+            <li className="d-none d-md-block">Browse by language</li>
           </ul>
         </div>
 
         {/* RIGHT */}
         <div className="right-wrapper">
           <ul className="icons-list d-flex align-items-center">
-            <li>
-              <SearchIcon />
-            </li>
-            <li>
-              <NotificationsOutlinedIcon />
-            </li>
-            <li>
-              <AccountBoxIcon />
-            </li>
-            <li>
-              <ArrowDropDownIcon />
-            </li>
+            <li><SearchIcon /></li>
+            <li><NotificationsOutlinedIcon /></li>
+            <li><AccountBoxIcon /></li>
+            <li><ArrowDropDownIcon /></li>
           </ul>
         </div>
       </div>
